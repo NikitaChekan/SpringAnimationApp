@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA1C922F29117A5300D116EC /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1C922E29117A5300D116EC /* Animation.swift */; };
+		DA1C923129117A9E00D116EC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1C923029117A9E00D116EC /* DataManager.swift */; };
 		DAC6EE622910611D00A4E808 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6EE612910611D00A4E808 /* AppDelegate.swift */; };
 		DAC6EE642910611D00A4E808 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6EE632910611D00A4E808 /* SceneDelegate.swift */; };
 		DAC6EE662910611D00A4E808 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6EE652910611D00A4E808 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA1C922E29117A5300D116EC /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		DA1C923029117A9E00D116EC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		DAC6EE5E2910611C00A4E808 /* SpringAnimationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpringAnimationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC6EE612910611D00A4E808 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAC6EE632910611D00A4E808 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA1C9229291179FF00D116EC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DA1C923029117A9E00D116EC /* DataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DA1C922C29117A2D00D116EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA1C922E29117A5300D116EC /* Animation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		DAC6EE552910611C00A4E808 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +78,8 @@
 		DAC6EE602910611C00A4E808 /* SpringAnimationApp */ = {
 			isa = PBXGroup;
 			children = (
+				DA1C922C29117A2D00D116EC /* Models */,
+				DA1C9229291179FF00D116EC /* Services */,
 				DAC6EE752910613C00A4E808 /* App */,
 				DAC6EE762910614900A4E808 /* ViewControllers */,
 				DAC6EE772910615800A4E808 /* Storyboards */,
@@ -179,8 +201,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAC6EE662910611D00A4E808 /* ViewController.swift in Sources */,
+				DA1C923129117A9E00D116EC /* DataManager.swift in Sources */,
 				DAC6EE622910611D00A4E808 /* AppDelegate.swift in Sources */,
 				DAC6EE642910611D00A4E808 /* SceneDelegate.swift in Sources */,
+				DA1C922F29117A5300D116EC /* Animation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
