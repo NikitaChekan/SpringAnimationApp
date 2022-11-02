@@ -2,7 +2,7 @@
 //  DataManager.swift
 //  SpringAnimationApp
 //
-//  Created by jopootrivatel on 01.11.2022.
+//  Created by Nikita Chekan on 01.11.2022.
 //
 
 //import SpringAnimation
@@ -10,7 +10,7 @@
 class DataManager {
     static let shared = DataManager()
     
-    let animations = [
+    let presets = [
         "pop",
         "slideLeft",
         "slideRight",

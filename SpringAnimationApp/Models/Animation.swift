@@ -2,11 +2,12 @@
 //  Animation.swift
 //  SpringAnimationApp
 //
-//  Created by jopootrivatel on 01.11.2022.
+//  Created by Nikita Chekan on 01.11.2022.
 //
+import Foundation
 
 struct Animation {
-    let animation: String
+    let preset: String
     let curve: String
     let force: Float
     let duration: Float
@@ -14,20 +15,20 @@ struct Animation {
     
     var description: String {
         """
-        animation: \(animation)
+        preset: \(preset)
         curve: \(curve)
-        force: \(force)
-        duration: \(duration)
-        delay: \(delay)
+        force: \(String(format: "%.2f", force))
+        duration: \(String(format: "%.2f", duration))
+        delay: \(String(format: "%.2f", delay))
         """
     }
     
     static func getRandomAnimation() -> Animation {
         Animation(
-            animation: DataManager.shared.animations.randomElement() ?? "pop",
-            curve: DataManager.shared.curves.randomElement() ?? "easeIn",
+            preset: DataManager.shared.presets.randomElement() ?? "",
+            curve: DataManager.shared.curves.randomElement() ?? "",
             force: Float.random(in: 0...2),
-            duration: Float.random(in: 0...1),
+            duration: Float.random(in: 1...1.3),
             delay: Float.random(in: 0...1)
         )
     }
