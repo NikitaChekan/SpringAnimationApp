@@ -9,9 +9,9 @@ import Foundation
 struct Animation {
     let preset: String
     let curve: String
-    let force: Float
-    let duration: Float
-    let delay: Float
+    let force: Double
+    let duration: Double
+    let delay: Double
     
     var description: String {
         """
@@ -25,11 +25,11 @@ struct Animation {
     
     static func getRandomAnimation() -> Animation {
         Animation(
-            preset: DataManager.shared.presets.randomElement() ?? "",
-            curve: DataManager.shared.curves.randomElement() ?? "",
-            force: Float.random(in: 0...2),
-            duration: Float.random(in: 1...1.3),
-            delay: Float.random(in: 0...1)
+            preset: DataManager.shared.presets.randomElement() ?? "pop",
+            curve: DataManager.shared.curves.randomElement() ?? "easeIn",
+            force: Double.random(in: 0...1.5),
+            duration: Double.random(in: 0.8...1.6),
+            delay: Double.random(in: 0.3...0.4)
         )
     }
 }
