@@ -25,9 +25,9 @@ struct Animation {
     
     static func getRandomAnimation() -> Animation {
         Animation(
-            preset: DataManager.shared.presets.randomElement() ?? "pop",
-            curve: DataManager.shared.curves.randomElement() ?? "easeIn",
-            force: Double.random(in: 0...1.5),
+            preset: DataStore.shared.presets.randomElement()?.rawValue ?? "pop",
+            curve: DataStore.shared.curves.randomElement()?.rawValue ?? "easeIn",
+            force: Double.random(in: 1...1.5),
             duration: Double.random(in: 0.8...1.6),
             delay: Double.random(in: 0.3...0.4)
         )

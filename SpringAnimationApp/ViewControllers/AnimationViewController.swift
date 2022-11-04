@@ -8,7 +8,7 @@
 import UIKit
 import SpringAnimation
 
-class AnimationViewController: UIViewController {
+final class AnimationViewController: UIViewController {
 
     @IBOutlet var springAnimationView: SpringView!
     @IBOutlet var descriptionLabel: UILabel! {
@@ -19,7 +19,7 @@ class AnimationViewController: UIViewController {
     
     private var animation = Animation.getRandomAnimation()
 
-    @IBAction func startSpringAnimation(_ sender: SpringButton) {
+    @IBAction func startSpringAnimation(_ sender: UIButton) {
         descriptionLabel.text = animation.description
         
         springAnimationView.animation = animation.preset
@@ -32,16 +32,6 @@ class AnimationViewController: UIViewController {
         animation = Animation.getRandomAnimation()
         sender.setTitle("Run \(animation.preset)", for: .normal)
 
-    }
-    
-    // MARK: Private Methonds
-    private func setAnimation(from _: Animation) {
-        springAnimationView.curve = animation.curve
-        springAnimationView.force = animation.force
-        springAnimationView.duration = animation.duration
-        springAnimationView.delay = animation.delay
-        
-        springAnimationView.animate()
     }
 }
 
